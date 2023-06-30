@@ -1,0 +1,11 @@
+db.students.insertMany([ 
+  { id: 1, name: 'Ryan', gender: 'M' }, 
+  { id: 2, name: 'Joanna', gender: 'F' } 
+]); 
+db.students.find({ gender: 'F' }); 
+db.students.updateOne( 
+  { id: 1 }, 
+  { $set: { name: "Ryan Smith", gender: "M" } } 
+); 
+ 
+db.students.deleteOne({ id: 2 }); db.students.find() 
